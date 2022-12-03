@@ -1,0 +1,1 @@
+[Problem](https://practice.geeksforgeeks.org/problems/buying-vegetables0016/1)

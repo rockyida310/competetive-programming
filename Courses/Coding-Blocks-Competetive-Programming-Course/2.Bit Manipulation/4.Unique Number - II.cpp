@@ -1,0 +1,41 @@
+
+#include "bits/stdc++.h"
+using namespace std;
+
+vector<int> uniqueNumber2(vector<int> arr){
+    int Xor = 0;
+    for(auto &c:arr){
+        Xor ^= c;
+    }
+
+    int temp = Xor;
+    int pos = 0;
+    while((temp&1)!=1){
+        pos++;
+        temp = temp>>1;
+    }
+
+    //first set bit is at position pos
+    int mask = 1<<pos;
+
+    int x=0,y=0;
+    for(auto &c:arr){
+        if((c&mask) > 0)
+            x ^= c;
+    }
+
+    y = Xor^x;
+
+    return vector<int>{min(x,y),max(x,y)};
+}
+
+int main(){
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(auto &c:arr)
+        cin>>c;
+    vector<int> res = uniqueNumber2(arr);
+    cout<<res[0]<<" "<<res[1]<<"\n";
+    return 0;
+}
