@@ -1,32 +1,25 @@
-    
-    #include "bits/stdc++.h"
-    using namespace std;
+#include<bits/stdc++.h>
+using namespace std;
+ 
+//header files
+#include<ext/pb_ds/assoc_container.hpp>
+#include<ext/pb_ds/tree_policy.hpp>
+// including tree_order_statistics_node_update
+ 
+using namespace __gnu_pbds; 
+ 
+typedef tree<
+       int,
+       null_type,
+       less<int>,
+       rb_tree_tag,
+       tree_order_statistics_node_update >
+       ordered_set;
+ 
 
-    //print all subsequences
-    void filterChars(string s,int mask){
-        int j = 0;
-        while(mask > 0){
-            int last_bit = (mask&1);
-            if(last_bit == 1){
-                cout<<s[j];
-            }
-            ++j;
-            mask = mask>>1;
-        }
-    }
+ 
+int main(){
 
-    void printSubsets(string s){
-        int n = s.length();
-        for(int i=0;i<(1<<n);++i){
-            filterChars(s,i);
-            cout<<endl;
-        }   
-        return;
-    }
-
-    int main(){
-        string s;
-        cin>>s;
-        printSubsets(s);
-        return 0;
-    }
+ 
+ 
+}
