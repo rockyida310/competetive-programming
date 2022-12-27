@@ -1,0 +1,9 @@
+INDEX VERSION 1.131+E:\Repositories\Problem Solving\Competetive-Programming\Practice\Codeforces\Contests\.metadata\.plugins\org.eclipse.jdt.core
+4127188331.index
+2931503786.index
+588641475.index
+1079310858.index
+75931715.index
+2682433458.index
+1865797976.index
+1313918778.index
